@@ -26,7 +26,7 @@ Getting and Creating Projects.
 - =git init=: Create an empty Git repository or reinitialize an existing one.
 - =git clone=: Clone a repository into a new directory
 
-** Excercise 1 Initialize a git repository in a directory
+** Excercise 1: Initialize a git repository in a directory
 
 #+begin_src shell
 $ mkdir new-repo
@@ -34,7 +34,7 @@ $ cd new-repo
 $ git init
 #+end_src
 
-** Excercise 2 Clone this repository into your file system
+** Excercise 2: Clone this repository into your file system
 
 #+begin_src shell
 
@@ -47,6 +47,16 @@ $ git clone https://github.com/dawranliou/git-workshop.git
 
 * =git status=
 Show the working tree status.
+
+** Excercise 3: Check the status of your supposedly clean repo
+
+#+begin_src shell
+
+$ cd git-workshop
+$ git status
+
+#+end_src
+
 * =git add=
 * =git commit=
 * =git push=

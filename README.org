@@ -102,3 +102,4 @@ Join two or more development histories together
 Reapply commits on top of another base tip.
 
 * Bonus
+- [Oh Shit, Git!?!](https://ohshitgit.com/) - how to fix your screwed-up git repository.

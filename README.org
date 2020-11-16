@@ -344,6 +344,6 @@ Update remote refs along with associated objects.
 #+end_quote
 
 * Bonus
-- [[[https://git-scm.com/docs][Git official references]]
+- [[https://git-scm.com/docs][Git official references]]
 - [[https://github.com/GitAlias/gitalias][Git aliases]]
-- [[[https://ohshitgit.com/][Oh Shit, Git!?!]] - how to fix your screwed-up git repository.
+- [[https://ohshitgit.com/][Oh Shit, Git!?!]] - how to fix your screwed-up git repository.

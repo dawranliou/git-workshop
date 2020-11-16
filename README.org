@@ -46,9 +46,9 @@
 * Housekeeping
 - [[https://github.com/dawranliou/git-workshop.git][Workshopt repo]]
 - ~ 1 hour
-- Ask questions. Don't worry about interruptions.
+- Ask questions. Don't worry about interrupting the workshop.
 - I'll also remind myself to stop and ask if you have any question.
-- Be sure to have access to [[[https://git-scm.com/][git]].
+- Be sure to have access to [[https://git-scm.com/][git]].
 
 * Introduction
 ** Why version control systems?
@@ -296,7 +296,7 @@ By merging the develop to master, our commit history looks like:
 #+begin_src shell
 
 # Merge command merges the "other" branch into the "current" branch. Therefore,
-# we need to switch back to the =master= branch first.
+# we need to switch back to the master branch first.
 $ git checkout master
 # Merge in the develop brach
 $ git merge develop

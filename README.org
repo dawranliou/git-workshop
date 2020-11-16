@@ -73,6 +73,19 @@ $ git add .
 #+end_src
 
 * =git commit=
+Record changes to the repository.
+
+** Excercise 5: Commit the staging area
+
+#+begin_src shell
+
+$ git commit
+
+# Or attach the commit message in one go
+$ git commit -m "Add new file - excercise.txt"
+
+#+end_src
+
 * =git push=
 * =git branch=
 * =git checkout=

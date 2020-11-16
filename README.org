@@ -58,6 +58,20 @@ $ git status
 #+end_src
 
 * =git add=
+Add file contents to the index.
+
+** Excercise 4: Add a new file into the staging area (or the index)
+
+#+begin_src shell
+
+# Create a new empty file
+$ touch excercise.txt
+$ git add excercise.txt
+# Or add everything to the staging area
+$ git add .
+
+#+end_src
+
 * =git commit=
 * =git push=
 * =git branch=

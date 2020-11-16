@@ -1,10 +1,53 @@
 #+TITLE: Git Workshop
 
+* Table of Contents
+:PROPERTIES:
+:TOC:      :include all
+:END:
+:CONTENTS:
+- [[#table-of-contents][Table of Contents]]
+- [[#housekeeping][Housekeeping]]
+- [[#introduction][Introduction]]
+  - [[#why-version-control-systems][Why version control systems?]]
+  - [[#why-2-stage-commit][Why 2-stage commit?]]
+- [[#git-init--git-clone][git init / git clone]]
+  - [[#exercise-initialize-a-git-repository-in-a-directory][[Exercise] Initialize a git repository in a directory]]
+  - [[#exercise-clone-this-repository-into-your-file-system][[Exercise] Clone this repository into your file system]]
+  - [[#question-what-do-you-think-initializing-the-git-repo-did-to-your-working-directory][[Question] What do you think initializing the git repo did to your working directory?]]
+- [[#git-status][git status]]
+  - [[#exercise-check-the-status-of-your-repo][[Exercise]: Check the status of your repo]]
+  - [[#question-what-do-you-see-in-the-git-status][[Question]: What do you see in the git status?]]
+- [[#git-add][git add]]
+  - [[#exercise-add-a-new-file-into-the-staging-area][[Exercise] Add a new file into the staging area.]]
+  - [[#question-whats-in-your-git-status-now][[Question] What's in your git status now?]]
+- [[#git-commit][git commit]]
+  - [[#exercise-commit-the-staging-area][[Exercise] Commit the staging area]]
+  - [[#question-whats-in-your-git-status-now][[Question] What's in your git status now?]]
+  - [[#exercise-add-another-commit-in-master][[Exercise] Add another commit in master]]
+- [[#git-branch][git branch]]
+  - [[#question-can-you-find-an-example-where-branching-is-used-without-a-version-control-system][[Question] Can you find an example where branching is used without a version control system?]]
+- [[#git-checkout][git checkout]]
+  - [[#exercise-checkout-a-new-branch][[Exercise] Checkout a new branch]]
+  - [[#question-whats-in-your-git-status-now][[Question] What's in your git status now?]]
+  - [[#exercise-add-more-commits-in-develop-branch][[Exercise] Add more commits in develop branch]]
+  - [[#question-whats-in-your-git-status-now][[Question] What's in your git status now?]]
+  - [[#exercise-switch-back-to-master-branch-and-add-commits][[Exercise] Switch back to master branch and add commits]]
+- [[#git-merge][git merge]]
+  - [[#exercise-merge-the-develop-branch-into-the-master][[Exercise] Merge the develop branch into the master]]
+  - [[#question-what-does-it-mean-to-have-conflicts][[Question] What does it mean to have conflicts?]]
+  - [[#exercise-resolve-the-conflict][[Exercise] Resolve the conflict]]
+- [[#git-rebase][git rebase]]
+  - [[#exercise][[Exercise]​]]
+- [[#git-push][git push]]
+- [[#bonus][Bonus]]
+:END:
+
 * Housekeeping
 - [[https://github.com/dawranliou/git-workshop.git][Workshopt repo]]
 - ~ 1 hour
 - Ask questions. Don't worry about interruptions.
-- Be sure to have access to [git](https://git-scm.com/).
+- I'll also remind myself to stop and ask if you have any question.
+- Be sure to have access to [[[https://git-scm.com/][git]].
 
 * Introduction
 ** Why version control systems?
@@ -21,34 +64,49 @@ Further Readings:
 - https://softwareengineering.stackexchange.com/a/69187
 
 * =git init= / =git clone=
+#+begin_quote
 Getting and Creating Projects.
+#+end_quote
 
-- =git init=: Create an empty Git repository or reinitialize an existing one.
-- =git clone=: Clone a repository into a new directory
+- =init=: Create an empty Git repository or reinitialize an existing one.
+- =clone=: Clone a (remote) repository into a new directory
 
-** Excercise 1: Initialize a git repository in a directory
+** [Exercise] Initialize a git repository in a directory
 
 #+begin_src shell
+
 $ mkdir new-repo
 $ cd new-repo
 $ git init
+
 #+end_src
 
-** Excercise 2: Clone this repository into your file system
+** [Exercise] Clone this repository into your file system
 
 #+begin_src shell
 
-# if you have ssh setup already, do
+# Go to a different working directory assuming you are still in the new-repo
+# directory.
+$ cd ..
+# if you have ssh setup already, do:
 $ git clone git@github.com:dawranliou/git-workshop.git
-# else
+# otherwise, do:
 $ git clone https://github.com/dawranliou/git-workshop.git
 
 #+end_src
 
-* =git status=
-Show the working tree status.
+** [Question] What do you think initializing the git repo did to your working directory?
 
-** Excercise 3: Check the status of your supposedly clean repo
+* =git status=
+#+begin_quote
+Show the working tree status.
+#+end_quote
+
+Git status gives you a lot of information about the current state of your git
+repo. When I screwed up a git repo, I usually could deduce what went wrong based
+on the git status. You should be doing git status a lot too to get familiar with git.
+
+** [Exercise]: Check the status of your repo
 
 #+begin_src shell
 
@@ -57,10 +115,17 @@ $ git status
 
 #+end_src
 
-* =git add=
-Add file contents to the index.
+** [Question]: What do you see in the git status?
 
-** Excercise 4: Add a new file into the staging area (or the index)
+* =git add=
+#+begin_quote
+Add file contents to the index.
+#+end_quote
+
+This is the first stage of the 2-stage commit. We can have multiple dirty files,
+i.e. files with untracked changes, but only select a couple to be committed.
+
+** [Exercise] Add a new file into the staging area.
 
 #+begin_src shell
 
@@ -72,34 +137,213 @@ $ git add .
 
 #+end_src
 
-* =git commit=
-Record changes to the repository.
+** [Question] What's in your git status now?
 
-** Excercise 5: Commit the staging area
+#+begin_src shell
+
+$ git status
+
+#+end_src
+
+* =git commit=
+#+begin_quote
+Record changes to the repository.
+#+end_quote
+
+A commit is a single unit in git's version control system. Every single commit
+is assigned with a SHA code to preserve its integrity. Traversing the commit
+history and operating on the commit history is simple and fast in git. You are
+encouraged to make small, incremental commits rather than a huge one. You are
+also encouraged to make imperfect commits and clean up the history later.
+
+** [Exercise] Commit the staging area
 
 #+begin_src shell
 
 $ git commit
 
 # Or attach the commit message in one go
-$ git commit -m "Add new file - excercise.txt"
+$ git commit -m "Add file - excercise.txt"
 
 #+end_src
 
-* =git push=
-Update remote refs along with associated objects.
+** [Question] What's in your git status now?
+
+#+begin_src shell
+
+$ git status
+
+#+end_src
+
+** [Exercise] Add another commit in master
+
+#+begin_src shell
+
+$ echo "# excercise.txt - a file for excercise" >> excercise.txt
+$ git add excercise.txt
+$ git commit "Add file comment"
+
+#+end_src
 
 * =git branch=
+#+begin_quote
 List, create, or delete branches.
+#+end_quote
+
+Branch is one of the most liberating ability given by a version control
+system. You are free to track multiple states of your source code at any given
+time without worrying about screwing it up.
+
+In practice, I rarely use the =branch= command to create a new branch because of
+a shortcut we'll see in the next section.
+
+** [Question] Can you find an example where branching is used without a version control system?
 
 * =git checkout=
+#+begin_quote
 Switch branches or restore working tree files
+#+end_quote
+
+** [Exercise] Checkout a new branch
+
+#+begin_src shell
+
+$ git checkout -b develop
+
+#+end_src
+
+** [Question] What's in your git status now?
+
+#+begin_src shell
+
+$ git status
+
+#+end_src
+
+** [Exercise] Add more commits in develop branch
+
+#+begin_src shell
+
+$ echo "This is line one" >> excercise.txt
+$ git add excercise.txt
+$ git commit "Add the first line"
+
+$ echo "This is line two" >> excercise.txt
+$ git add excercise.txt
+$ git commit "Add the second line"
+
+$ echo "This is line three" >> excercise.txt
+$ git add excercise.txt
+$ git commit "Add the third line"
+
+#+end_src
+
+** [Question] What's in your git status now?
+
+#+begin_src shell
+
+$ git status
+
+#+end_src
+
+** [Exercise] Switch back to master branch and add commits
+
+#+begin_src shell
+
+$ git checkout master
+
+$ echo "This is line 0" >> excercise.txt
+$ git add excercise.txt
+$ git commit "Add the zeroth line"
+
+$ echo "This is line 1" >> excercise.txt
+$ git add excercise.txt
+$ git commit "Add the first line"
+
+$ echo "This is line 2" >> excercise.txt
+$ git add excercise.txt
+$ git commit "Add the second line"
+
+#+end_src
 
 * =git merge=
+#+begin_quote
 Join two or more development histories together
+#+end_quote
+
+When we have two versions of our source code, we can then merge them together. A
+practical case would be merging a feature branch into the master/main branch
+after the feature branch is fully tested. Imaging we currently have this:
+
+#+begin_src
+	         A---B---C develop
+     	  /
+    D---E---F---G master
+#+end_src
+
+By merging the develop to master, our commit history looks like:
+
+#+begin_src
+	         A---B---C develop
+	        /         \
+    D---E---F---G---H master
+#+end_src
+
+** [Exercise] Merge the develop branch into the master
+
+#+begin_src shell
+
+# Merge command merges the "other" branch into the "current" branch. Therefore,
+# we need to switch back to the master branch first.
+$ git checkout master
+# Merge in the develop brach
+$ git merge develop
+
+# ...and a merge conflict!
+
+#+end_src
+
+** [Question] What does it mean to have conflicts?
+
+** [Exercise] Resolve the conflict
 
 * =git rebase=
+#+begin_quote
 Reapply commits on top of another base tip.
+#+end_quote
+
+So far, we haven't encounter any command that is destructive, which isn't the
+case for =rebase=. =rebase= rewrites the git history and it is irreversible, so
+use it cautiously. Although you can choose to abort the =rebase= operation
+anytime, it's safest to first create a temporary branch to track the existing
+state before =rebase=. However destructive, it is useful to keep the git history
+clean while collaborating with others. Let's think of the feature branch again:
+
+#+begin_src
+          A---B---C feature
+         /
+    D---E---F---G master
+#+end_src
+
+When we rebase the =feature= branch on our =master=, we rewrite the history on
+=feature= to:
+
+#+begin_src
+                  A'--B'--C' feature
+                 /
+    D---E---F---G master
+#+end_src
+
+The =feature='s commits, =A=, =B=, and =C=, becomes =A'=, =B'=, and =C'=.
+
+** [Exercise]
+
+* =git push=
+#+begin_quote
+Update remote refs along with associated objects.
+#+end_quote
 
 * Bonus
-- [Oh Shit, Git!?!](https://ohshitgit.com/) - how to fix your screwed-up git repository.
+- [[[https://git-scm.com/docs][Git official references]]
+- [[https://github.com/GitAlias/gitalias][Git aliases]]
+- [[[https://ohshitgit.com/][Oh Shit, Git!?!]] - how to fix your screwed-up git repository.

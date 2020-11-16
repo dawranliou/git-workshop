@@ -105,7 +105,8 @@ Show the working tree status.
 
 Git status gives you a lot of information about the current state of your git
 repo. When I screwed up a git repo, I usually could deduce what went wrong based
-on the git status. You should be doing git status a lot too to get familiar with git.
+on the git status. You should be doing git status a lot too to get familiar with
+git.
 
 ** Exercise:: Check the status of your repo
 
@@ -277,17 +278,17 @@ practical case would be merging a =feature= branch into the master/main branch
 after the =feature= branch is fully tested. Imaging we currently have this:
 
 #+begin_src
-               A---B---C develop
-             /
-    D---E---F---G master
+           A---B---C develop
+         /
+D---E---F---G master
 #+end_src
 
 By merging the develop to master, our commit history looks like:
 
 #+begin_src
-             A---B---C develop
-            /         \
-    D---E---F---G---H master
+           A---B---C develop
+         /         \
+D---E---F---G---H master
 #+end_src
 
 ** Exercise: Merge the develop branch into the master
@@ -329,21 +330,22 @@ case for =rebase=. =rebase= rewrites the git history and it is irreversible, so
 use it cautiously. Although you can choose to abort the =rebase= operation
 anytime, it's safest to first create a temporary branch to track the existing
 state before =rebase=. However destructive, it is useful to keep the git history
-clean while collaborating with others. Let's think of the =feature= branch again:
+clean while collaborating with others. Let's think of the =feature= branch
+again:
 
 #+begin_src
-          A---B---C feature
+           A---B---C feature
          /
-    D---E---F---G master
+D---E---F---G master
 #+end_src
 
 When we rebase the =feature= branch on our =master=, we rewrite the history on
 =feature= to:
 
 #+begin_src
-                  A'--B'--C' feature
-                 /
-    D---E---F---G master
+                         A'--B'--C' feature
+                       /
+D---E---F---G master
 #+end_src
 
 The =feature='s commits, =A=, =B=, and =C=, becomes =A'=, =B'=, and =C'=.
@@ -358,4 +360,5 @@ Update remote refs along with associated objects.
 * Bonus
 - [[https://git-scm.com/docs][Git official references]]
 - [[https://github.com/GitAlias/gitalias][Git aliases]]
-- [[https://ohshitgit.com/][Oh Shit, Git!?!]] - how to fix your screwed-up git repository.
+- [[https://ohshitgit.com/][Oh Shit, Git!?!]] - how to fix your screwed-up git
+  repository.

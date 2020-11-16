@@ -1,0 +1,57 @@
+#+TITLE: Git Workshop
+
+* Housekeeping
+- [[https://github.com/dawranliou/git-workshop.git][Workshopt repo]]
+- ~ 1 hour
+- Ask questions. Don't worry about interruptions.
+- Be sure to have access to [git](https://git-scm.com/).
+
+* Introduction
+** Why version control systems?
+For the peace of mind.
+
+** Why 2-stage commit?
+Definitions:
+- Workspace - all unstaged changes.
+- Staging area (a.k.a. index) - a “holding area” for changes that will be
+  committed when you next do git commit.
+
+Further Readings:
+- https://gitolite.com/uses-of-index.html
+- https://softwareengineering.stackexchange.com/a/69187
+
+* =git init= / =git clone=
+Getting and Creating Projects.
+
+- =git init=: Create an empty Git repository or reinitialize an existing one.
+- =git clone=: Clone a repository into a new directory
+
+** Excercise 1 Initialize a git repository in a directory
+
+#+begin_src shell
+$ mkdir new-repo
+$ cd new-repo
+$ git init
+#+end_src
+
+** Excercise 2 Clone this repository into your file system
+
+#+begin_src shell
+
+# if you have ssh setup already, do
+$ git clone git@github.com:dawranliou/git-workshop.git
+# else
+$ git clone https://github.com/dawranliou/git-workshop.git
+
+#+end_src
+
+* =git status=
+Show the working tree status.
+* =git add=
+* =git commit=
+* =git push=
+* =git branch=
+* =git checkout=
+* =git merge=
+* =git rebase=
+* Bonus

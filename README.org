@@ -19,25 +19,26 @@
   - [[#question-what-do-you-see-in-the-git-status][Question:: What do you see in the git status?]]
 - [[#git-add][git add]]
   - [[#exercise-add-a-new-file-into-the-staging-area][Exercise: Add a new file into the staging area.]]
-  - [[#question-whats-in-your-git-status-now][Question: What's in your git status now?]]
+  - [[#question-git-status][Question: git status?]]
 - [[#git-commit][git commit]]
   - [[#exercise-commit-the-staging-area][Exercise: Commit the staging area]]
-  - [[#question-whats-in-your-git-status-now][Question: What's in your git status now?]]
+  - [[#question-git-status][Question: git status?]]
   - [[#exercise-add-another-commit-in-master][Exercise: Add another commit in master]]
 - [[#git-branch][git branch]]
   - [[#question-can-you-find-an-example-where-branching-is-used-without-a-version-control-system][Question: Can you find an example where branching is used without a version control system?]]
 - [[#git-checkout][git checkout]]
   - [[#exercise-checkout-a-new-branch][Exercise: Checkout a new branch]]
-  - [[#question-whats-in-your-git-status-now][Question: What's in your git status now?]]
+  - [[#question-git-status][Question: git status?]]
   - [[#exercise-add-more-commits-in-develop-branch][Exercise: Add more commits in develop branch]]
-  - [[#question-whats-in-your-git-status-now][Question: What's in your git status now?]]
+  - [[#question-git-status][Question: git status?]]
   - [[#exercise-switch-back-to-master-branch-and-add-commits][Exercise: Switch back to master branch and add commits]]
 - [[#git-merge][git merge]]
   - [[#exercise-merge-the-develop-branch-into-the-master][Exercise: Merge the develop branch into the master]]
+  - [[#question-git-status][Question: git status?]]
   - [[#question-what-does-it-mean-to-have-conflicts][Question: What does it mean to have conflicts?]]
   - [[#exercise-resolve-the-conflict][Exercise: Resolve the conflict]]
 - [[#git-rebase][git rebase]]
-  - [[#exercise][Exercise:]]
+  - [[#exercise-rebase-the-feature-on-the-master][Exercise: Rebase the feature on the master]]
 - [[#git-push][git push]]
 - [[#bonus][Bonus]]
 :END:
@@ -137,7 +138,7 @@ $ git add .
 
 #+end_src
 
-** Question: What's in your git status now?
+** Question: =git status=?
 
 #+begin_src shell
 
@@ -167,7 +168,7 @@ $ git commit -m "Add file - excercise.txt"
 
 #+end_src
 
-** Question: What's in your git status now?
+** Question: =git status=?
 
 #+begin_src shell
 
@@ -212,7 +213,7 @@ $ git checkout -b develop
 
 #+end_src
 
-** Question: What's in your git status now?
+** Question: =git status=?
 
 #+begin_src shell
 
@@ -238,7 +239,7 @@ $ git commit "Add the third line"
 
 #+end_src
 
-** Question: What's in your git status now?
+** Question: =git status=?
 
 #+begin_src shell
 
@@ -246,7 +247,7 @@ $ git status
 
 #+end_src
 
-** Exercise: Switch back to master branch and add commits
+** Exercise: Switch back to =master= branch and add commits
 
 #+begin_src shell
 
@@ -272,8 +273,8 @@ Join two or more development histories together
 #+end_quote
 
 When we have two versions of our source code, we can then merge them together. A
-practical case would be merging a feature branch into the master/main branch
-after the feature branch is fully tested. Imaging we currently have this:
+practical case would be merging a =feature= branch into the master/main branch
+after the =feature= branch is fully tested. Imaging we currently have this:
 
 #+begin_src
 	         A---B---C develop
@@ -290,11 +291,12 @@ By merging the develop to master, our commit history looks like:
 #+end_src
 
 ** Exercise: Merge the develop branch into the master
+** Question: =git status=?
 
 #+begin_src shell
 
 # Merge command merges the "other" branch into the "current" branch. Therefore,
-# we need to switch back to the master branch first.
+# we need to switch back to the =master= branch first.
 $ git checkout master
 # Merge in the develop brach
 $ git merge develop
@@ -307,6 +309,16 @@ $ git merge develop
 
 ** Exercise: Resolve the conflict
 
+#+begin_src shell
+
+# Open your text editor and fix the conflicts
+
+$ git merge --continue
+# Or abort it
+# $ git merge --abort
+
+#+end_src
+
 * =git rebase=
 #+begin_quote
 Reapply commits on top of another base tip.
@@ -317,7 +329,7 @@ case for =rebase=. =rebase= rewrites the git history and it is irreversible, so
 use it cautiously. Although you can choose to abort the =rebase= operation
 anytime, it's safest to first create a temporary branch to track the existing
 state before =rebase=. However destructive, it is useful to keep the git history
-clean while collaborating with others. Let's think of the feature branch again:
+clean while collaborating with others. Let's think of the =feature= branch again:
 
 #+begin_src
           A---B---C feature
@@ -336,7 +348,7 @@ When we rebase the =feature= branch on our =master=, we rewrite the history on
 
 The =feature='s commits, =A=, =B=, and =C=, becomes =A'=, =B'=, and =C'=.
 
-** Exercise:
+** TODO Exercise: Rebase the =feature= on the =master=
 
 * =git push=
 #+begin_quote

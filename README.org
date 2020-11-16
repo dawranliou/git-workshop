@@ -278,16 +278,16 @@ practical case would be merging a =feature= branch into the master/main branch
 after the =feature= branch is fully tested. Imaging we currently have this:
 
 #+begin_src
-           A---B---C develop
-         /
+      A---B---C develop
+     /
 D---E---F---G master
 #+end_src
 
 By merging the develop to master, our commit history looks like:
 
 #+begin_src
-           A---B---C develop
-         /         \
+      A---B---C develop
+     /         \
 D---E---F---G---H master
 #+end_src
 
@@ -334,8 +334,8 @@ clean while collaborating with others. Let's think of the =feature= branch
 again:
 
 #+begin_src
-           A---B---C feature
-         /
+      A---B---C feature
+     /
 D---E---F---G master
 #+end_src
 
@@ -343,8 +343,8 @@ When we rebase the =feature= branch on our =master=, we rewrite the history on
 =feature= to:
 
 #+begin_src
-                         A'--B'--C' feature
-                       /
+              A'--B'--C' feature
+             /
 D---E---F---G master
 #+end_src
 

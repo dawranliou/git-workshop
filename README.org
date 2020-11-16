@@ -87,8 +87,18 @@ $ git commit -m "Add new file - excercise.txt"
 #+end_src
 
 * =git push=
+Update remote refs along with associated objects.
+
 * =git branch=
+List, create, or delete branches.
+
 * =git checkout=
+Switch branches or restore working tree files
+
 * =git merge=
+Join two or more development histories together
+
 * =git rebase=
+Reapply commits on top of another base tip.
+
 * Bonus

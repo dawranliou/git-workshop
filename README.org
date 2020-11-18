@@ -1,12 +1,12 @@
 #+TITLE: Git Workshop
 
-* Table of Contents
+* Agenda
 :PROPERTIES:
-:TOC:      :include all
+:TOC:      :include all :ignore this
 :END:
 :CONTENTS:
-- [[#table-of-contents][Table of Contents]]
 - [[#housekeeping][Housekeeping]]
+- [[#icebreaker][Icebreaker]]
 - [[#introduction][Introduction]]
   - [[#why-version-control-systems][Why version control systems?]]
   - [[#why-2-stage-commit][Why 2-stage commit?]]
@@ -50,15 +50,17 @@
 - I'll also remind myself to stop and ask if you have any question.
 - Be sure to have access to [[https://git-scm.com/][git]].
 
+* Icebreaker
+- Two truths and a lie
+
 * Introduction
 ** Why version control systems?
 For the peace of mind.
-
 ** Why 2-stage commit?
 Definitions:
 - Workspace - all unstaged changes.
 - Staging area (a.k.a. index) - a “holding area” for changes that will be
-  committed when you next do git commit.
+  committed when you next do a git commit.
 
 Further Readings:
 - https://gitolite.com/uses-of-index.html
@@ -119,6 +121,16 @@ $ git status
 
 ** Question:: What do you see in the git status?
 
+#+begin_src shell
+
+On branch master/main/develop
+
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+#+end_src
+
 * =git add=
 #+begin_quote
 Add file contents to the index.
@@ -132,8 +144,8 @@ i.e. files with untracked changes, but only select a couple to be committed.
 #+begin_src shell
 
 # Create a new empty file
-$ touch excercise.txt
-$ git add excercise.txt
+$ touch exercise.txt
+$ git add exercise.txt
 # Or add everything to the staging area
 $ git add .
 
@@ -165,7 +177,7 @@ also encouraged to make imperfect commits and clean up the history later.
 $ git commit
 
 # Or attach the commit message in one go
-$ git commit -m "Add file - excercise.txt"
+$ git commit -m "Add file - exercise.txt"
 
 #+end_src
 
@@ -181,8 +193,8 @@ $ git status
 
 #+begin_src shell
 
-$ echo "# excercise.txt - a file for excercise" >> excercise.txt
-$ git add excercise.txt
+$ echo "# exercise.txt - a file for exercise" >> exercise.txt
+$ git add exercise.txt
 $ git commit "Add file comment"
 
 #+end_src
@@ -226,16 +238,16 @@ $ git status
 
 #+begin_src shell
 
-$ echo "This is line one" >> excercise.txt
-$ git add excercise.txt
+$ echo "This is line one" >> exercise.txt
+$ git add exercise.txt
 $ git commit "Add the first line"
 
-$ echo "This is line two" >> excercise.txt
-$ git add excercise.txt
+$ echo "This is line two" >> exercise.txt
+$ git add exercise.txt
 $ git commit "Add the second line"
 
-$ echo "This is line three" >> excercise.txt
-$ git add excercise.txt
+$ echo "This is line three" >> exercise.txt
+$ git add exercise.txt
 $ git commit "Add the third line"
 
 #+end_src
@@ -254,16 +266,16 @@ $ git status
 
 $ git checkout master
 
-$ echo "This is line 0" >> excercise.txt
-$ git add excercise.txt
+$ echo "This is line 0" >> exercise.txt
+$ git add exercise.txt
 $ git commit "Add the zeroth line"
 
-$ echo "This is line 1" >> excercise.txt
-$ git add excercise.txt
+$ echo "This is line 1" >> exercise.txt
+$ git add exercise.txt
 $ git commit "Add the first line"
 
-$ echo "This is line 2" >> excercise.txt
-$ git add excercise.txt
+$ echo "This is line 2" >> exercise.txt
+$ git add exercise.txt
 $ git commit "Add the second line"
 
 #+end_src

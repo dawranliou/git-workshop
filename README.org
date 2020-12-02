@@ -25,6 +25,7 @@
 - [[#git-merge][git merge]]
 - [[#git-rebase][git rebase]]
 - [[#git-push][git push]]
+- [[#whats-next][What's next?]]
 - [[#bonus][Bonus]]
 :END:
 
@@ -353,6 +354,10 @@ The =feature='s commits, =A=, =B=, and =C=, becomes =A'=, =B'=, and =C'=.
 #+begin_quote
 Update remote refs along with associated objects.
 #+end_quote
+
+* What's next?
+- [[https://git-scm.com/book/en/v2][Pro Git Book]]
+- Knowing Git Workflows: see [[https://www.atlassian.com/git/tutorials/comparing-workflows][Comparing Workflows]]
 
 * Bonus
 - [[https://git-scm.com/docs][Git official references]]

@@ -30,7 +30,7 @@
 
 * Housekeeping
 - [[https://github.com/dawranliou/git-workshop.git][Workshopt repo]]
-- ~ 1 hour
+- ~ +1+ 4 hours
 - Ask questions. Don't worry about interrupting the workshop.
 - I'll also remind myself to stop and ask if you have any question.
 - Be sure to have access to [[https://git-scm.com/][git]].

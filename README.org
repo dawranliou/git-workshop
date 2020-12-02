@@ -370,8 +370,12 @@ Update remote refs along with associated objects.
 #+end_quote
 
 * What's next?
-- [[https://git-scm.com/book/en/v2][Pro Git Book]]
+- Working with remote repo
+  - =git remote=
+  - =git fetch=
+  - =git pull=
 - Knowing Git Workflows: see [[https://www.atlassian.com/git/tutorials/comparing-workflows][Comparing Workflows]]
+- [[https://git-scm.com/book/en/v2][Pro Git Book]]
 
 * Bonus
 - [[https://git-scm.com/docs][Git official references]]

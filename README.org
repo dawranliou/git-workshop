@@ -9,44 +9,21 @@
 
 * Agenda
 :PROPERTIES:
-:TOC:      :include all :ignore this
+:TOC:      :include all :ignore this :depth 1
 :END:
 :CONTENTS:
 - [[#prework][Prework]]
 - [[#housekeeping][Housekeeping]]
 - [[#icebreaker][Icebreaker]]
 - [[#introduction][Introduction]]
-  - [[#why-version-control-systems][Why version control systems?]]
-  - [[#why-2-stage-commit][Why 2-stage commit?]]
 - [[#git-init--git-clone][git init / git clone]]
-  - [[#exercise-initialize-a-git-repository-in-a-directory][Exercise: Initialize a git repository in a directory]]
-  - [[#exercise-clone-this-repository-into-your-file-system][Exercise: Clone this repository into your file system]]
-  - [[#question-what-do-you-think-initializing-the-git-repo-did-to-your-working-directory][Question: What do you think initializing the git repo did to your working directory?]]
 - [[#git-status][git status]]
-  - [[#exercise-check-the-status-of-your-repo][Exercise:: Check the status of your repo]]
-  - [[#question-what-do-you-see-in-the-git-status][Question:: What do you see in the git status?]]
 - [[#git-add][git add]]
-  - [[#exercise-add-a-new-file-into-the-staging-area][Exercise: Add a new file into the staging area.]]
-  - [[#question-git-status][Question: git status?]]
 - [[#git-commit][git commit]]
-  - [[#exercise-commit-the-staging-area][Exercise: Commit the staging area]]
-  - [[#question-git-status][Question: git status?]]
-  - [[#exercise-add-another-commit-in-master][Exercise: Add another commit in master]]
 - [[#git-branch][git branch]]
-  - [[#question-can-you-find-an-example-where-branching-is-used-without-a-version-control-system][Question: Can you find an example where branching is used without a version control system?]]
 - [[#git-checkout][git checkout]]
-  - [[#exercise-checkout-a-new-branch][Exercise: Checkout a new branch]]
-  - [[#question-git-status][Question: git status?]]
-  - [[#exercise-add-more-commits-in-develop-branch][Exercise: Add more commits in develop branch]]
-  - [[#question-git-status][Question: git status?]]
-  - [[#exercise-switch-back-to-master-branch-and-add-commits][Exercise: Switch back to master branch and add commits]]
 - [[#git-merge][git merge]]
-  - [[#exercise-merge-the-develop-branch-into-the-master][Exercise: Merge the develop branch into the master]]
-  - [[#question-git-status][Question: git status?]]
-  - [[#question-what-does-it-mean-to-have-conflicts][Question: What does it mean to have conflicts?]]
-  - [[#exercise-resolve-the-conflict][Exercise: Resolve the conflict]]
 - [[#git-rebase][git rebase]]
-  - [[#exercise-rebase-the-feature-on-the-master][Exercise: Rebase the feature on the master]]
 - [[#git-push][git push]]
 - [[#bonus][Bonus]]
 :END:

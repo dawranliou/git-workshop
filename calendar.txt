@@ -1,0 +1,6 @@
+# calendar.txt
+# Add important meetings below
+# Example:
+#
+# 1. 12/2 git workshop part 2
+#

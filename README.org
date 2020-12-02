@@ -348,6 +348,8 @@ D---E---F---G master
 
 The =feature='s commits, =A=, =B=, and =C=, becomes =A'=, =B'=, and =C'=.
 
+See [[https://git-scm.com/book/en/v2/Git-Branching-Rebasing#_rebase_vs_merge][Rebase vs. Merge]] for their differences.
+
 ** TODO Exercise: Rebase the =feature= on the =master=
 
 * =git push=

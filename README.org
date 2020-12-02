@@ -3,6 +3,7 @@
 
 #+CAPTION: https://xkcd.com/1597/
 [[file:img/git.png]]
+
 /Source: https://xkcd.com/1597//
 
 * Prework
@@ -163,6 +164,7 @@ also encouraged to make imperfect commits and clean up the history later.
 
 #+CAPTION: https://xkcd.com/1296
 [[file:./img/git_commit.png]]
+
 /Source: https://xkcd.com/1296//
 
 ** Exercise: Commit the staging area

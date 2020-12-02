@@ -1,11 +1,6 @@
 #+TITLE: Git Workshop
 #+STARTUP: inlineimages
 
-#+CAPTION: https://xkcd.com/1597/
-[[file:img/git.png]]
-
-/Source: https://xkcd.com/1597//
-
 * Prework
 - Install =git=
   - For Mac and Linux users, you shouldn't need to do anything.
@@ -48,6 +43,12 @@
 * Introduction
 ** Why version control systems?
 For the peace of mind.
+
+#+CAPTION: https://xkcd.com/1597/
+[[file:img/git.png]]
+
+/Source: https://xkcd.com/1597//
+
 ** Why 2-stage commit?
 Definitions:
 - Workspace - all unstaged changes.

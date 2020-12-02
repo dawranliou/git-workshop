@@ -1,10 +1,18 @@
 #+TITLE: Git Workshop
 
+* Prework
+- Install =git=
+  - For Mac and Linux users, you shouldn't need to do anything.
+  - For Windows users, [[https://git-scm.com/downloads][download and install =git= here]].
+- Follow [[https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup][First-Time Git Setup]] guide.
+- Fork this [[https://github.com/dawranliou/git-workshop][repo]] on Github.
+
 * Agenda
 :PROPERTIES:
 :TOC:      :include all :ignore this
 :END:
 :CONTENTS:
+- [[#prework][Prework]]
 - [[#housekeeping][Housekeeping]]
 - [[#icebreaker][Icebreaker]]
 - [[#introduction][Introduction]]

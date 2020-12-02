@@ -1,0 +1,3 @@
+# This file is exercise.txt
+# TODO Add a list of exercises
+# Assigned to: ...

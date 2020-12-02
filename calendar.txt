@@ -6,3 +6,5 @@
 #
 
 1. 12/2 Git bigineer's workshop
+1. 12/2 Lunch
+1. 12/2 Afternoon coffee

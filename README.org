@@ -1,4 +1,8 @@
 #+TITLE: Git Workshop
+#+STARTUP: inlineimages
+
+#+CAPTION: https://xkcd.com/1597/
+[[file:img/git.png]]
 
 * Prework
 - Install =git=
@@ -155,6 +159,9 @@ is assigned with a SHA code to preserve its integrity. Traversing the commit
 history and operating on the commit history is simple and fast in git. You are
 encouraged to make small, incremental commits rather than a huge one. You are
 also encouraged to make imperfect commits and clean up the history later.
+
+#+CAPTION: https://xkcd.com/1296
+[[file:./img/git_commit.png]]
 
 ** Exercise: Commit the staging area
 

@@ -1,3 +1,5 @@
 # This file is exercise.txt
-# TODO Add a list of exercises
-# Assigned to: ...
+
+This is a temporary line 1.
+This is a temporary line 2.
+This is a temporary line 3.

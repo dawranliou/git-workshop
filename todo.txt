@@ -1,0 +1,7 @@
+# todo.txt
+# Add todos in the list below
+# Example:
+# 1. Go shopping
+# 2. Stay healthy
+# 3. Exercise more
+# 4. ...
